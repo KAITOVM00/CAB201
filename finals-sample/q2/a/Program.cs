@@ -27,21 +27,12 @@ namespace q2_a
 
             for (int i = 0; i < range; i++)
             {
-                Swap(values, firstIndex, secondIndex);
+                values.Swap(firstIndex, secondIndex);
                 firstIndex++;
                 secondIndex--;
             }
 
             return values;
-        }
-
-        private static double[] Swap(double[] numbers, int oneIndex, int otherIndex)
-        {
-            double temp = numbers[oneIndex];
-            numbers[oneIndex] = numbers[otherIndex];
-            numbers[otherIndex] = temp;
-
-            return numbers;
         }
 
         private static void OutputData(double[] numbers)
