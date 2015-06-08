@@ -46,9 +46,9 @@ namespace q2_a
 
         private static void OutputData(double[] numbers)
         {
-            foreach (int n in numbers)
+            foreach (double n in numbers)
             {
-                Console.Write(n.ToString());
+                Console.Write(n.ToString() + " ");
             }
             Console.WriteLine("\n");
         }
