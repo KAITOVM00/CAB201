@@ -9,7 +9,7 @@ namespace q2_a
     {
         static void Main(string[] args)
         {
-            
+
         }
 
         public static void Reverse(double[] values, int start, int finish)
@@ -19,7 +19,7 @@ namespace q2_a
 
         public static double[] Swap(double[] numbers, int oneIndex, int otherIndex)
         {
-            double temp = numbers[otherIndex];
+            double temp = numbers[oneIndex];
             numbers[oneIndex] = numbers[otherIndex];
             numbers[otherIndex] = temp;
 
