@@ -9,7 +9,13 @@ namespace q2_a
     {
         static void Main(string[] args)
         {
-            
+            double[] data = { 8.5, 12.0, 23.2, 18.0, 15.5, 5.0, 10.5 };
+            OutputData(data);
+
+            data = Reverse(data, 2, 5);
+            OutputData(data);
+
+            Console.ReadKey();
         }
 
         private static double[] Reverse(double[] values, int start, int finish)
@@ -36,6 +42,15 @@ namespace q2_a
             numbers[otherIndex] = temp;
 
             return numbers;
+        }
+
+        private static void OutputData(double[] numbers)
+        {
+            foreach (int n in numbers)
+            {
+                Console.Write(n.ToString());
+            }
+            Console.WriteLine("\n");
         }
     }
 }
