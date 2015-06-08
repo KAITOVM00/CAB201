@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace q2_a
 {
@@ -13,14 +12,18 @@ namespace q2_a
             
         }
 
-        public void Reverse(double[] values, int start, int finish)
+        public static void Reverse(double[] values, int start, int finish)
         {
 
         }
 
-        private void Swap(int[] numbers, int oneIndex, int otherIndex)
+        public static double[] Swap(double[] numbers, int oneIndex, int otherIndex)
         {
+            double temp = numbers[otherIndex];
+            numbers[oneIndex] = numbers[otherIndex];
+            numbers[otherIndex] = temp;
 
+            return numbers;
         }
     }
 }
