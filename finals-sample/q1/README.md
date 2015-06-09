@@ -10,7 +10,7 @@ Each of the following methods is a student’s answer to that question and each 
 There are no compiler errors in any of the answers. For each, identify what is the error (or errors). Each part is worth 2 marks.
 
 **(a)**
-<pre>
+````c
 static int FirstPairOfDuplicates (int[] anArray) {
     for (int i = 0; i < anArray.Length;  i++) {
             for (int j = 0; j < anArray.Length; j++) {
@@ -21,12 +21,12 @@ static int FirstPairOfDuplicates (int[] anArray) {
         }
     return -1;
 }
-</pre>
+````
 
 * The code returns `i` when it is equal to `j` even if the two values are not "adjacent"
 
 **(b)**
-<pre>
+````c
 static int FirstPairOfDuplicates (int[] anArray) {
     int counter = 1;
     int currentNumber = anArray[0];
@@ -43,7 +43,7 @@ static int FirstPairOfDuplicates (int[] anArray) {
     } while (!found)
         return counter;
 }
-</pre>
+````
 
 * `currentNumber` is setup to the first element of the array so, realistically, the method is ignoring and not comparing the other numbers in the array
 * index of the number (called `counter` in this case) is returned even if the two numbers not adjacent
@@ -51,7 +51,7 @@ static int FirstPairOfDuplicates (int[] anArray) {
 * when the value of `counter` becomes 9, the application will crash throwing an `index out of range` exception
 
 **(c)**
-<pre>
+````c
 static int FirstPairOfDuplicates (int[] anArray) {
     int temp = -1;
     int count = 0;
@@ -65,12 +65,12 @@ static int FirstPairOfDuplicates (int[] anArray) {
     }
     return count;
 }
-</pre>
+````
 
 * `count` is still returned even if a pair is not found instead of `-1`
 
 **(d)**
-<pre>
+````c
 static int FirstPairOfDuplicates (int[] anArray) {
     int temp =0;
     int index = 0;
@@ -83,12 +83,12 @@ static int FirstPairOfDuplicates (int[] anArray) {
     }
     return -1;
 }
-</pre>
+````
 
 * `index` is unused in any useful manner
 
 **(e)**
-<pre>
+````c
 static int FirstPairOfDuplicates (int[] anArray) {
     for (int i = 0; i < anArray.Length;  i++) {
         if (anArray[i] == anArray[i+1]) {
@@ -97,4 +97,4 @@ static int FirstPairOfDuplicates (int[] anArray) {
     }
     return -1;
 }
-</pre>
+````
