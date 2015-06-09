@@ -9,7 +9,7 @@ Each of the following methods is a student’s answer to that question and each 
 
 There are no compiler errors in any of the answers. For each, identify what is the error (or errors). Each part is worth 2 marks.
 
-**(a)**
+##a
 ````c
 static int FirstPairOfDuplicates (int[] anArray) {
     for (int i = 0; i < anArray.Length;  i++) {
@@ -25,7 +25,7 @@ static int FirstPairOfDuplicates (int[] anArray) {
 
 * The code returns `i` when it is equal to `j` even if the two values are not "adjacent"
 
-**(b)**
+## b
 ````c
 static int FirstPairOfDuplicates (int[] anArray) {
     int counter = 1;
@@ -40,8 +40,8 @@ static int FirstPairOfDuplicates (int[] anArray) {
         } else {
             counter++;
         }
-    } while (!found)
-        return counter;
+    } while (!found);
+    return counter;
 }
 ````
 
@@ -50,7 +50,7 @@ static int FirstPairOfDuplicates (int[] anArray) {
 * max length of the array is 9. However, `counter` is incremented by 1 each iteration if a match is not found. Furthermore, the loop will indefinitely run and the return statement would become "unreachable code".
 * when the value of `counter` becomes 9, the application will crash throwing an `index out of range` exception
 
-**(c)**
+## c
 ````c
 static int FirstPairOfDuplicates (int[] anArray) {
     int temp = -1;
@@ -69,10 +69,10 @@ static int FirstPairOfDuplicates (int[] anArray) {
 
 * `count` is still returned even if a pair is not found instead of `-1`
 
-**(d)**
+## d
 ````c
 static int FirstPairOfDuplicates (int[] anArray) {
-    int temp =0;
+    int temp = 0;
     int index = 0;
     for (int i = 0; i < anArray.Length;  i++) {
         temp = anArray[i];
@@ -87,7 +87,7 @@ static int FirstPairOfDuplicates (int[] anArray) {
 
 * `index` is unused in any useful manner
 
-**(e)**
+## e
 ````c
 static int FirstPairOfDuplicates (int[] anArray) {
     for (int i = 0; i < anArray.Length;  i++) {
